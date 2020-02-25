@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "DisplayUserInfo";
+}
+
+@model RegisterUser
+<h1>DisplayUserInfo</h1>
+
+
+<table class="col-md-8">
+    <tr>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Gender</th>
+        <th>Phone Number</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>@Model.UserName</td>
+        <td>@Model.Email</td>
+        <td>@Model.Password</td>
+        <td>@Model.Gender</td>
+        <td>@Model.PhoneNum</td>
+        <td>@Model.Age</td>
+    </tr>
+</table>
