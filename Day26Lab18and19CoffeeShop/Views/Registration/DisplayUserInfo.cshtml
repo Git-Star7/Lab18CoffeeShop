@@ -3,7 +3,6 @@
     ViewData["Title"] = "DisplayUserInfo";
 }
 
-@model RegisterUser
 <h1>DisplayUserInfo</h1>
 
 
@@ -17,11 +16,11 @@
         <th>Age</th>
     </tr>
     <tr>
-        <td>@Model.UserName</td>
-        <td>@Model.Email</td>
-        <td>@Model.Password</td>
-        <td>@Model.Gender</td>
-        <td>@Model.PhoneNum</td>
-        <td>@Model.Age</td>
+        <td>@TempData["BagName"].ToString()</td>
+        <td>@TempData["BagEmail"].ToString()</td>
+        <td>@TempData["BagPassword"].ToString()</td>
+        <td>@TempData["BagGender"].ToString()</td>
+        <td>@TempData["BagPhone"].ToString()</td>
+        <td>@TempData["BagAge"].ToString()</td>
     </tr>
 </table>

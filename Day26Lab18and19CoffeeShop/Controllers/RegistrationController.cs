@@ -9,6 +9,7 @@ namespace Day26Lab18and19CoffeeShop.Controllers
 {
     public class RegistrationController : Controller
     {
+        
         public IActionResult RegistrationForm()
         {
             return View(new RegisterUser());
@@ -17,16 +18,22 @@ namespace Day26Lab18and19CoffeeShop.Controllers
         {
             if (ModelState.IsValid)
             {
-                return View(user);
+                TempData["BagName"] = user.UserName;
+                TempData["BagEmail"] = user.Email;
+                TempData["BagPassword"] = user.Password;
+                TempData["BagGender"] = user.Gender;
+                TempData["BagPhone"] = user.PhoneNum;
+                TempData["BagAge"] = user.Age;
+                return View();
             }
             else
             {
                 return View("RegistrationForm", user);
             }
         }
-        public IActionResult DisplayUserInfo(RegisterUser user)
+        public IActionResult DisplayUserInfo()
         {
-            return View(user);
+            return View();
         }
     }
 }
